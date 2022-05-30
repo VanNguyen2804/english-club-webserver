@@ -5,8 +5,20 @@ import { PageNotFoundComponent } from './core/components/page-not-found/page-not
 
 const routes: Routes = [
   {
+    path: '',
+    loadChildren: () => import('./features/activities/activities.module').then(m => m.ActivitiesModule)
+  },
+  {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'activities',
+    loadChildren: () => import('./features/activities/activities.module').then(m => m.ActivitiesModule)
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./features/user/user.module').then(m => m.UserModule)
   },
   {
     path: 'invalid-url',

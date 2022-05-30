@@ -4,6 +4,7 @@ import { HeaderComponent } from "./header/header.component";
 import { BoostrapHeaderComponent } from './header/boostrap-header/boostrap-header.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboutComponent } from './about/about.component';
+import { CommonModule } from "@angular/common";
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { AboutComponent } from './about/about.component';
     AboutComponent
   ],
   imports: [
+    CommonModule
   ],
   exports: [
     HeaderComponent,
