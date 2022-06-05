@@ -2,5 +2,26 @@
   <div class="row">
     <h1>Welcome to EET English Club</h1>
     <p>This is english club for EET department</p>
+  <div [formGroup]="aboutForm">
+    <label>Name</label>
+    <input formControlName="name" />
+    <label>Age</label>
+    <input formControlName="age" />
+  </div>
+
+  <form (ngSubmit)="submit()" #submitForm="ngForm">
+    <label for="name">Name</label>
+    <input id="name" [(ngModel)]="nameField" name="name"  />
+
+    <label for="age">Age</label>
+    <input id="age" [(ngModel)]="ageField" name="age" />
+    <button type="submit">Submit</button>
+  </form>
+
+  <button (click)="test1(submitForm)" class="btn btn-primary">Test</button>
+  {{submitForm.value | json}}
+
+
+  <app-test-about #test #content></app-test-about>
   </div>
 </div>

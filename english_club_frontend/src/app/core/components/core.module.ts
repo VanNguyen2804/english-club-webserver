@@ -4,7 +4,9 @@ import { HeaderComponent } from "./header/header.component";
 import { BoostrapHeaderComponent } from './header/boostrap-header/boostrap-header.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboutComponent } from './about/about.component';
+import { ShareModule } from "src/app/share/share.module";
 import { CommonModule } from "@angular/common";
+import { TestAboutComponent } from './about/test-about/test-about.component';
 
 
 @NgModule({
@@ -13,9 +15,11 @@ import { CommonModule } from "@angular/common";
     FooterComponent,
     BoostrapHeaderComponent,
     PageNotFoundComponent,
-    AboutComponent
+    AboutComponent,
+    TestAboutComponent
   ],
   imports: [
+    ShareModule,
     CommonModule
   ],
   exports: [
